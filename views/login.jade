@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  //- h1= title
+  if error
+    p Error: #{error}
+
+  form.form-signin(method="post")
+    h2.form-signin-heading Please sign in
+    input.input-block-level(type="email", name="email", placeholder="Email address", required="true")
+    input.input-block-level(type="password", name="password", placeholder="Password", required="true")
+    button.btn.btn-large.btn-primary(type="submit") Sign in
+    br
+    p <a href="/register">Dont have account??</a>  
+    br
+    <a href="/logout">home</a>
+   
